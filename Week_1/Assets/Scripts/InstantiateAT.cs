@@ -12,6 +12,8 @@ namespace NodeCanvas.Tasks.Actions
 
         public Transform spawnPoint;
         public GameObject cube;
+        float timer;
+        float cubeLifeSpan = 5;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -28,13 +30,16 @@ namespace NodeCanvas.Tasks.Actions
         //EndAction can be called from anywhere.
         protected override void OnExecute()
         {
+            timer++;
 
-            for (int i = 0; i > 2; i--)
+            GameObject.Instantiate(cube, spawnPoint.position, Quaternion.identity);
+            Debug.Log("Spawned in cube!");
+
+            if(timer > cubeLifeSpan)
             {
-                GameObject.Instantiate(cube, spawnPoint.position, Quaternion.identity);
-
+                cube.SetActive(false);
             }
-
+            
 
             EndAction(true);
         }
