@@ -15,7 +15,7 @@ public class CubeLifeSpan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.position = transform.position + Vector3.up * Time.deltaTime;
             Destroy(gameObject, 4);
 
     }
