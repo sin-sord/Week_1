@@ -1,26 +1,21 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-using UnityEditor;
 using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Actions
 {
 
-    public class InstantiateAT : ActionTask
+    public class MovingAT : ActionTask
     {
-
+        public GameObject sphere;
         public Transform spawnPoint;
-        public GameObject cube;
-
+        
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit()
         {
-
-
-
             return null;
         }
 
@@ -30,12 +25,8 @@ namespace NodeCanvas.Tasks.Actions
         protected override void OnExecute()
         {
 
-
-            GameObject.Instantiate(cube, spawnPoint.position, Quaternion.identity);
-            Debug.Log("Spawned in cube");
-            
-
-            EndAction(true);
+            GameObject.Instantiate(sphere, spawnPoint.transform.position, Quaternion.identity);
+            //EndAction(true);
         }
 
         //Called once per frame while the action is active.

@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class CubeLifeSpan : MonoBehaviour
+public class MoveSphere : MonoBehaviour
 {
+
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-            Destroy(gameObject, 4);
-
+        transform.position = Vector3.up;
+        Destroy(gameObject, 4);
     }
 }
