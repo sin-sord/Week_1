@@ -400,8 +400,8 @@ MonoBehaviour:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 250, y: 270}
-    _zoomFactor: 1
+    _translation: {x: 89, y: 216}
+    _zoomFactor: 0.5871562
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
