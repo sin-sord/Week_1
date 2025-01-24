@@ -1,5 +1,6 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -9,18 +10,18 @@ namespace NodeCanvas.Tasks.Actions
     public class VisibilityAT : ActionTask
     {
 
-
-        Color visibilityAlpha;
         public float visibilityUseRate;
         private Blackboard agentBlackboard;
-        private float speed;
 
+        public float value;
+        public Material sprite;
+        Color visibility;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit()
         {
-
+            visibility = sprite.color;
             return null;
         }
 
@@ -30,10 +31,14 @@ namespace NodeCanvas.Tasks.Actions
         protected override void OnExecute()
         {
 
-            // references the objects blackboard
-            agentBlackboard = agent.GetComponent<Blackboard>();
-            speed = agentBlackboard.GetVariableValue<float>("speed");
-
+            //  gets the blackboards variable "visibility"
+            float visibility = agentBlackboard.GetVariableValue<float>("visibility");
+         
+            //  value of the variable decreases each frame
+            visibility -= visibilityUseRate * Time.deltaTime;
+          
+            //  updates the value of the variable
+            agentBlackboard.SetVariableValue("visibility", visibility);
 
         }
 
@@ -41,31 +46,21 @@ namespace NodeCanvas.Tasks.Actions
         protected override void OnUpdate()
         {
 
-                //  gets the objects visibility from the blackboard
-                float visibility = agentBlackboard.GetVariableValue<float>("visibility");
-                // visibility decreases over time
-                visibilityAlpha.a -= Time.deltaTime;
-                visibility -= visibilityUseRate * Time.deltaTime;
+            visibility.a = value / 255;
+            sprite.color = visibility;
 
-            agent.transform.position = Vector3.up;
-
-          
+            EndAction(true);
         }
 
         //Called when the task is disabled.
         protected override void OnStop()
         {
 
-
-
         }
 
         //Called when the task is paused.
         protected override void OnPause()
         {
-
-
-
 
         }
 
