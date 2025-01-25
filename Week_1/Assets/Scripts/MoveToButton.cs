@@ -7,13 +7,11 @@ namespace NodeCanvas.Tasks.Actions {
 
     public class MoveToButton : ActionTask {
 
+        public BBParameter<Transform> directionTransform;
         public Transform button;
-        private Blackboard agentBlackboard;
-		private float speed = 3;
+		public float speed;
         public float arrivalDistance;
 		public float direction;
-		
-
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -28,16 +26,18 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			
 
-		}
+       }
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 
 
+            Blackboard buttonBlackboard = directionTransform.value.GetComponent<Blackboard>();
+            Debug.Log("The opacity is now: " + buttonBlackboard.GetVariableValue<string>("CubeOpacityValue"));
 
-			Vector3 arriveAtButton = (button.position - agent.transform.position).normalized;
+
+            Vector3 arriveAtButton = (button.position - agent.transform.position).normalized;
             agent.transform.position += agent.transform.right * direction * speed * Time.deltaTime;
 
             float distanceToRedButton = Vector3.Distance(agent.transform.position, button.transform.position);

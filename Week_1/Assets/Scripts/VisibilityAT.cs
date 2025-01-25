@@ -15,6 +15,10 @@ namespace NodeCanvas.Tasks.Actions
         public float value;
         public Material sprite;
         Color visibility;
+        private float speed = -1;
+
+        public float visibilityRate;
+        public BBParameter<Transform> buttonTransform;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -30,14 +34,14 @@ namespace NodeCanvas.Tasks.Actions
         protected override void OnExecute()
         {
 
-
-
+            agentBlackboard = agent.GetComponent<Blackboard>();
+            Blackboard buttonBlackboard = buttonTransform.value.GetComponent<Blackboard>();
+            Debug.Log("The opacity is now: " + buttonBlackboard.GetVariableValue<string>("CubeOpacityValue"));
         }
 
         //Called once per frame while the action is active.
         protected override void OnUpdate()
         {
-
             visibility.a = value / 255;
             sprite.color = visibility;
 
