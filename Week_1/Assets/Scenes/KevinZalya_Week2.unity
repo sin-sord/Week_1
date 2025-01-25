@@ -439,8 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{"visibility":{"_value":1.0,"_name":"visibility","_id":"f4f5a7b7-6f4c-4d46-a24b-213fd7ee559f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"speed":{"_value":1.0,"_name":"speed","_id":"b2916431-4f71-47c0-8eac-624bda71ace0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  _serializedBlackboard: '{"_variables":{"speed":{"_value":1.0,"_name":"speed","_id":"b2916431-4f71-47c0-8eac-624bda71ace0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"RedButton":{"_value":1,"_name":"RedButton","_id":"1ea264de-99bf-45be-8d19-9154d27abaa3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"bluebutton":{"_value":2,"_name":"bluebutton","_id":"449fd5bd-b554-4847-b5dd-2b1130aa7960","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"buttonhit":{"_value":"button
@@ -451,9 +450,6 @@ MonoBehaviour:
   - {fileID: 601324523}
   - {fileID: 1415202829}
   _serializedVariables:
-  - _json: '{"_value":1.0,"_name":"visibility","_id":"f4f5a7b7-6f4c-4d46-a24b-213fd7ee559f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
-    _references: []
   - _json: '{"_value":1.0,"_name":"speed","_id":"b2916431-4f71-47c0-8eac-624bda71ace0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
@@ -483,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"button":1,"speed":5.0,"arrivalDistance":0.5,"direction":1.0,"$type":"NodeCanvas.Tasks.Actions.MoveToButton"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move","_position":{"x":403.0,"y":110.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"value":25.0,"sprite":2,"visibilityRate":52.0,"button":{"_name":"RedButton","_targetVariableID":"1ea264de-99bf-45be-8d19-9154d27abaa3"},"$type":"NodeCanvas.Tasks.Actions.VisibilityAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Invisible","_position":{"x":638.0,"y":275.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"button":3,"speed":5.0,"arrivalDistance":0.5,"direction":-1.0,"$type":"NodeCanvas.Tasks.Actions.MoveToButton"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move","_position":{"x":456.0,"y":424.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"value":255.0,"sprite":2,"visibilityRate":52.0,"button":{"_name":"bluebutton","_targetVariableID":"449fd5bd-b554-4847-b5dd-2b1130aa7960"},"$type":"NodeCanvas.Tasks.Actions.VisibilityAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Visible","_position":{"x":224.0,"y":262.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"directionTransform":{},"button":1,"speed":5.0,"arrivalDistance":0.5,"direction":1.0,"$type":"NodeCanvas.Tasks.Actions.MoveToButton"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move","_position":{"x":403.0,"y":110.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"value":25.0,"sprite":2,"visibilityRate":100.0,"buttonTransform":{},"$type":"NodeCanvas.Tasks.Actions.VisibilityAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Invisible","_position":{"x":637.0,"y":275.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"directionTransform":{},"button":3,"speed":5.0,"arrivalDistance":0.5,"direction":-1.0,"$type":"NodeCanvas.Tasks.Actions.MoveToButton"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move","_position":{"x":456.0,"y":424.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"value":255.0,"sprite":2,"visibilityRate":100.0,"buttonTransform":{},"$type":"NodeCanvas.Tasks.Actions.VisibilityAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Visible","_position":{"x":224.0,"y":262.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 601324529}
@@ -493,7 +489,7 @@ MonoBehaviour:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 19, y: 54}
+    _translation: {x: 123, y: 57}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
