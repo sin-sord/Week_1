@@ -10,7 +10,6 @@ namespace NodeCanvas.Tasks.Actions
     public class VisibilityAT : ActionTask
     {
 
-        public float visibilityUseRate;
         private Blackboard agentBlackboard;
 
         public float value;
@@ -31,14 +30,7 @@ namespace NodeCanvas.Tasks.Actions
         protected override void OnExecute()
         {
 
-            //  gets the blackboards variable "visibility"
-            float visibility = agentBlackboard.GetVariableValue<float>("visibility");
-         
-            //  value of the variable decreases each frame
-            visibility -= visibilityUseRate * Time.deltaTime;
-          
-            //  updates the value of the variable
-            agentBlackboard.SetVariableValue("visibility", visibility);
+
 
         }
 

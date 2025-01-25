@@ -11,6 +11,7 @@ namespace NodeCanvas.Tasks.Actions {
         private Blackboard agentBlackboard;
 		private float speed = 3;
         public float arrivalDistance;
+		public float direction;
 		
 
 
@@ -37,7 +38,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 
 			Vector3 arriveAtButton = (button.position - agent.transform.position).normalized;
-            agent.transform.position += agent.transform.right * speed * Time.deltaTime;
+            agent.transform.position += agent.transform.right * direction * speed * Time.deltaTime;
 
             float distanceToRedButton = Vector3.Distance(agent.transform.position, button.transform.position);
 
