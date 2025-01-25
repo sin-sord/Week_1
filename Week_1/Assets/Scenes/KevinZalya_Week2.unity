@@ -442,9 +442,7 @@ MonoBehaviour:
   _serializedBlackboard: '{"_variables":{"speed":{"_value":1.0,"_name":"speed","_id":"b2916431-4f71-47c0-8eac-624bda71ace0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"RedButton":{"_value":1,"_name":"RedButton","_id":"1ea264de-99bf-45be-8d19-9154d27abaa3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"bluebutton":{"_value":2,"_name":"bluebutton","_id":"449fd5bd-b554-4847-b5dd-2b1130aa7960","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"buttonhit":{"_value":"button
-    pressed","_name":"buttonhit","_id":"6c67af77-07e7-41f3-b556-a976d3a74de9","$type":"NodeCanvas.Framework.Variable`1[[System.String,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 601324523}
@@ -463,9 +461,6 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 1415202829}
-  - _json: '{"_value":"button pressed","_name":"buttonhit","_id":"6c67af77-07e7-41f3-b556-a976d3a74de9","$type":"NodeCanvas.Framework.Variable`1[[System.String,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
-    _references: []
 --- !u!114 &331386783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"directionTransform":{},"button":1,"speed":5.0,"arrivalDistance":0.5,"direction":1.0,"$type":"NodeCanvas.Tasks.Actions.MoveToButton"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move","_position":{"x":403.0,"y":110.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"value":25.0,"sprite":2,"visibilityRate":100.0,"buttonTransform":{},"$type":"NodeCanvas.Tasks.Actions.VisibilityAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Invisible","_position":{"x":637.0,"y":275.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"directionTransform":{},"button":3,"speed":5.0,"arrivalDistance":0.5,"direction":-1.0,"$type":"NodeCanvas.Tasks.Actions.MoveToButton"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move","_position":{"x":456.0,"y":424.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"value":255.0,"sprite":2,"visibilityRate":100.0,"buttonTransform":{},"$type":"NodeCanvas.Tasks.Actions.VisibilityAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Visible","_position":{"x":224.0,"y":262.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"directionTransform":{"_name":"RedButton","_targetVariableID":"1ea264de-99bf-45be-8d19-9154d27abaa3"},"button":1,"speed":5.0,"arrivalDistance":0.5,"direction":1.0,"$type":"NodeCanvas.Tasks.Actions.MoveToButton"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move","_position":{"x":403.0,"y":110.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"value":25.0,"sprite":2,"visibilityRate":100.0,"buttonTransform":{"_name":"RedButton","_targetVariableID":"1ea264de-99bf-45be-8d19-9154d27abaa3"},"$type":"NodeCanvas.Tasks.Actions.VisibilityAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Invisible","_position":{"x":637.0,"y":275.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"directionTransform":{"_name":"bluebutton","_targetVariableID":"449fd5bd-b554-4847-b5dd-2b1130aa7960"},"button":3,"speed":5.0,"arrivalDistance":0.5,"direction":-1.0,"$type":"NodeCanvas.Tasks.Actions.MoveToButton"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move","_position":{"x":456.5,"y":424.5},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"value":255.0,"sprite":2,"visibilityRate":100.0,"buttonTransform":{"_name":"bluebutton","_targetVariableID":"449fd5bd-b554-4847-b5dd-2b1130aa7960"},"$type":"NodeCanvas.Tasks.Actions.VisibilityAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Visible","_position":{"x":224.0,"y":262.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 601324529}
@@ -489,7 +484,7 @@ MonoBehaviour:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 123, y: 57}
+    _translation: {x: 246, y: 6}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -715,7 +710,9 @@ MonoBehaviour:
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"CubeOpacityValue":{"_value":"25","_name":"CubeOpacityValue","_id":"6e9bb035-53ba-433f-917a-95ecdc5a4673","$type":"NodeCanvas.Framework.Variable`1[[System.String,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"button":{"_value":1,"_name":"button","_id":"3c623bb0-3264-41bc-be5b-69511f488416","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"movingto":{"_value":"Red
+    Button","_name":"movingto","_id":"3a5ac5f9-e635-4000-9442-be87ce4c5bdc","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 601324523}
@@ -728,6 +725,9 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 601324523}
+  - _json: '{"_value":"Red Button","_name":"movingto","_id":"3a5ac5f9-e635-4000-9442-be87ce4c5bdc","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
 --- !u!114 &601324531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,7 +981,9 @@ MonoBehaviour:
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"CubeOpacityValue":{"_value":"255","_name":"CubeOpacityValue","_id":"d073a7e5-a1e5-462d-afd4-1b4c1b1cf25a","$type":"NodeCanvas.Framework.Variable`1[[System.String,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"cube":{"_value":1,"_name":"cube","_id":"98d2f2d0-b3dc-4a1c-a620-7c1d6263f52d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"movingto":{"_value":"Blue
+    Button","_name":"movingto","_id":"4eca6ff7-cccf-44a5-ad5e-eeb5860887fe","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 331386777}
@@ -994,6 +996,9 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 331386777}
+  - _json: '{"_value":"Blue Button","_name":"movingto","_id":"4eca6ff7-cccf-44a5-ad5e-eeb5860887fe","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
 --- !u!114 &1415202832
 MonoBehaviour:
   m_ObjectHideFlags: 0

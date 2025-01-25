@@ -34,7 +34,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 
             Blackboard buttonBlackboard = directionTransform.value.GetComponent<Blackboard>();
-            Debug.Log("The opacity is now: " + buttonBlackboard.GetVariableValue<string>("CubeOpacityValue"));
+            Debug.Log("Now moving to: " + buttonBlackboard.GetVariableValue<string>("movingto"));
 
 
             Vector3 arriveAtButton = (button.position - agent.transform.position).normalized;
