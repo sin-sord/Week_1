@@ -1,5 +1,6 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace NodeCanvas.Tasks.Conditions {
@@ -29,13 +30,15 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
 
-			if (Input.GetKeyDown(KeyCode.D))
+			//  if the spacebar is pressed return true..
+			if (Input.GetKeyDown(KeyCode.Space))
 			{
 				return true;
               
             }
 			else
 			{
+				// else return false...
 				return (false);
 			}
 

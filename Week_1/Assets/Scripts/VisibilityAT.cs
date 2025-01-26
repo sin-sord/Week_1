@@ -33,7 +33,7 @@ namespace NodeCanvas.Tasks.Actions
         //EndAction can be called from anywhere.
         protected override void OnExecute()
         {
-
+            //  uses the Blackboard on the buttons to say what the opacity is when the box hits the buttons
             agentBlackboard = agent.GetComponent<Blackboard>();
             Blackboard buttonBlackboard = buttonTransform.value.GetComponent<Blackboard>();
             Debug.Log("The opacity is now: " + buttonBlackboard.GetVariableValue<string>("CubeOpacityValue"));
@@ -42,6 +42,8 @@ namespace NodeCanvas.Tasks.Actions
         //Called once per frame while the action is active.
         protected override void OnUpdate()
         {
+
+            //  changes the opacity of the object
             visibility.a = value / 255;
             sprite.color = visibility;
 

@@ -32,17 +32,18 @@ namespace NodeCanvas.Tasks.Actions {
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
 
-
+			//  grabs the Blackboards of the buttons and says which button it's moving to
             Blackboard buttonBlackboard = directionTransform.value.GetComponent<Blackboard>();
             Debug.Log("Now moving to: " + buttonBlackboard.GetVariableValue<string>("movingto"));
 
-
+			//  the movement part to have the box move to the buttons
             Vector3 arriveAtButton = (button.position - agent.transform.position).normalized;
             agent.transform.position += agent.transform.right * direction * speed * Time.deltaTime;
 
-            float distanceToRedButton = Vector3.Distance(agent.transform.position, button.transform.position);
+            float distanceToButton = Vector3.Distance(agent.transform.position, button.transform.position);
 
-            if (distanceToRedButton < arrivalDistance)
+			//  if the distance to the button is less than the arrival distance then end the action
+            if (distanceToButton < arrivalDistance)
             {
                 EndAction(true);
             }
