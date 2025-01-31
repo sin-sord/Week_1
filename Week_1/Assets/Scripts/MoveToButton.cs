@@ -47,8 +47,7 @@ namespace NodeCanvas.Tasks.Actions {
 			//  Fix line is saying that the character doesn't know where to go
 
             //  grabs the Blackboards of the buttons and says which button it's moving to
-            Blackboard buttonBlackboard = directionMovingIn.value.GetComponent<Blackboard>();
-            Debug.Log("Now moving to: " + buttonBlackboard.GetVariableValue<string>("movingto"));
+			
 
 			//  the movement part to have the box move to the buttons
             Vector3 arriveAtButton = (buttonTransform.value.position - agent.transform.position).normalized;
