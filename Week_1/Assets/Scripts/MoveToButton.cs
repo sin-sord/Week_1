@@ -8,7 +8,6 @@ namespace NodeCanvas.Tasks.Actions {
     public class MoveToButton : ActionTask {
 
         public BBParameter<Transform> directionTransform;
-        public Transform button;
 		public float speed;
         public float arrivalDistance;
 		public float direction;
