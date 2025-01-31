@@ -7,12 +7,12 @@ namespace NodeCanvas.Tasks.Actions {
 
     public class MoveToButton : ActionTask {
 
-        public BBParameter<Transform> directionTransform;
+        public BBParameter<Transform> directionMovingIn;
 		public float speed;
         public float arrivalDistance;
-		public float direction;
+
 		public BBParameter<Transform> buttonTransform;
-		private Blackboard chargerTransform;
+		public  Blackboard chargerTransform;
 		public float staminaUseRate;
 
         //Use for initialization. This is called only once in the lifetime of the task.
@@ -44,14 +44,15 @@ namespace NodeCanvas.Tasks.Actions {
             chargerTransform.SetVariableValue("stamina", stamina);
 
 
+			//  Fix line is saying that the character doesn't know where to go
 
             //  grabs the Blackboards of the buttons and says which button it's moving to
-            Blackboard buttonBlackboard = directionTransform.value.GetComponent<Blackboard>();
+            Blackboard buttonBlackboard = directionMovingIn.value.GetComponent<Blackboard>();
             Debug.Log("Now moving to: " + buttonBlackboard.GetVariableValue<string>("movingto"));
 
 			//  the movement part to have the box move to the buttons
             Vector3 arriveAtButton = (buttonTransform.value.position - agent.transform.position).normalized;
-            agent.transform.position += agent.transform.right * direction * speed * Time.deltaTime;
+            agent.transform.position += arriveAtButton *  speed * Time.deltaTime;
 
 
             float distanceToButton = Vector3.Distance(agent.transform.position, buttonTransform.value.position);
