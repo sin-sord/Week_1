@@ -500,7 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
   _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"exitMode":1,"_name":"Visibility
-    Change","_position":{"x":-140.0633,"y":58.18994},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"speed":3.0,"arrivalDistance":0.5,"buttonTransform":{"_name":"staminaregen","_targetVariableID":"a96d5366-ed2f-48ec-948f-a9e33375c163"},"$type":"NodeCanvas.Tasks.Actions.MoveToButton"},{"staminaRechargeRate":15.0,"maxStamina":100.0,"staminaRecharge":{"_name":"stamina","_targetVariableID":"edb95353-bc11-465f-8c43-5db84a220ef9"},"chargerPad":{"_name":"staminaregen","_targetVariableID":"a96d5366-ed2f-48ec-948f-a9e33375c163"},"$type":"NodeCanvas.Tasks.Actions.StaminaRechargeAT"}]},"_color":{"r":0.3215686,"g":1.0,"b":0.4848045,"a":1.0},"_name":"Recharge","_position":{"x":-1.19919,"y":-115.966},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"staminaRate":"stamina","threshold":5.0,"$type":"NodeCanvas.Tasks.Conditions.StaminaLowCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"staminaVariable":"stamina","threshold":99.0,"$type":"NodeCanvas.Tasks.Conditions.StaminaRechargeCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+    Change","_position":{"x":-140.0633,"y":58.18994},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"speed":3.0,"arrivalDistance":0.5,"buttonTransform":{"_name":"staminaregen","_targetVariableID":"a96d5366-ed2f-48ec-948f-a9e33375c163"},"$type":"NodeCanvas.Tasks.Actions.MoveToButton"},{"staminaRechargeRate":15.0,"maxStamina":100.0,"staminaRecharge":{"_name":"stamina","_targetVariableID":"edb95353-bc11-465f-8c43-5db84a220ef9"},"chargerPad":{"_name":"staminaregen","_targetVariableID":"a96d5366-ed2f-48ec-948f-a9e33375c163"},"$type":"NodeCanvas.Tasks.Actions.StaminaRechargeAT"}]},"_color":{"r":0.3215686,"g":1.0,"b":0.4848045,"a":1.0},"_name":"Recharge","_position":{"x":-1.19919,"y":-111.9525},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"staminaVariable":"stamina","threshold":5.0,"$type":"NodeCanvas.Tasks.Conditions.StaminaLowCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"staminaVariable":"stamina","threshold":99.0,"$type":"NodeCanvas.Tasks.Conditions.StaminaRechargeCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: c0c4c649972569145a8bbed1c85382c4, type: 2}
@@ -508,7 +508,7 @@ MonoBehaviour:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 416, y: 221}
+    _translation: {x: 524, y: 217}
     _zoomFactor: 0.49831873
   _firstActivation: 0
   _enableAction: 0

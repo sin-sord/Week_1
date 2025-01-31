@@ -6,7 +6,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class StaminaLowCT : ConditionTask {
 
-        public string staminaRate;
+        public string staminaVariable;
         public float threshold;
 
         private Blackboard staminaBlackboard;
@@ -34,7 +34,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
 
-            float value = staminaBlackboard.GetVariableValue<float>(staminaRate);
+            float value = staminaBlackboard.GetVariableValue<float>(staminaVariable);
             bool isUnderThreshold = value < threshold;
 
 
